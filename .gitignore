@@ -1,0 +1,41 @@
+# Build directories
+build/
+dist/
+out/
+
+# Compiled objects
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Executables
+myshell
+*.exe
+
+# History files
+.myshell_history
+.myshell_aliases
+
+# System
+.DS_Store
+Thumbs.db
+
+# Runtime
+*.log
