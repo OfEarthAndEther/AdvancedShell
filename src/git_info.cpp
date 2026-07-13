@@ -55,13 +55,13 @@ GitInfo::GitStatus GitInfo::getStatus() {
 std::string GitInfo::getPromptString() {
     if (!isInRepository()) return "";
     
-    std::string prompt = " [🌱 ";
+    std::string prompt = " [";
     prompt += getBranch();
     
     GitStatus status = getStatus();
-    if (status.modified) prompt += " ✏️";
-    if (status.staged) prompt += " ✅";
-    if (status.untracked) prompt += " ❓";
+    if (status.modified) prompt += " *";
+    if (status.staged) prompt += " +";
+    if (status.untracked) prompt += " ?";
     
     prompt += "]";
     return prompt;
