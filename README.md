@@ -16,6 +16,11 @@ A modular, POSIX-compliant Unix shell implemented from scratch in C++17. Designe
 
 ---
 
+<img width="1536" height="905" alt="Image" src="https://github.com/user-attachments/assets/8c2aa693-27d4-4128-ab30-d14a1a7b2568" />
+<img width="1536" height="922" alt="Image" src="https://github.com/user-attachments/assets/72138ca7-e803-4166-8501-1304e8036278" />
+
+---
+
 ## Core Features
 
 *   **POSIX Subprocess Spawning:** Clones processes natively via `fork()`, executing system binaries through `execvp()` and waiting synchronously via `waitpid()`.
