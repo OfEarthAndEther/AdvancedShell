@@ -40,8 +40,11 @@ std::string ShellPrompt::generate(int exitCode, const std::string& currentDir) {
     prompt += "@";
     
     // Hostname
-    char hostname;
-    gethostname(hostname, sizeof(hostname));
+    char hostname[256];
+    if (gethostname(hostname, sizeof(hostname)) != 0) {
+        strncpy(hostname, "unknown", sizeof(hostname) - 1);
+        hostname[sizeof(hostname) - 1] = '\0';
+    }
     prompt += ANSI_BLUE;
     prompt += hostname;
     prompt += ANSI_RESET;

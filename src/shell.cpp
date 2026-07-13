@@ -3,6 +3,7 @@
 #include <sstream>
 #include <unistd.h>
 #include <cstdlib>
+#include <cstring>
 
 Shell::Shell() : isRunning(true) {}
 

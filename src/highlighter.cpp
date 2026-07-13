@@ -27,7 +27,7 @@ std::string SyntaxHighlighter::highlight(const std::string& input) {
         
         if (tokenNum == 0) {
             result += highlightCommand(token);
-        } else if (token == '-') {
+        } else if (token == "-") {
             result += COLOR_FLAG;
             result += token;
             result += COLOR_RESET;
@@ -35,11 +35,11 @@ std::string SyntaxHighlighter::highlight(const std::string& input) {
             result += COLOR_PIPE;
             result += token;
             result += COLOR_RESET;
-        } else if (token == '>' || token == '<' || token == ">>" || token == "2>") {
+        } else if (token == ">" || token == "<" || token == ">>" || token == "2>") {
             result += COLOR_REDIRECT;
             result += token;
             result += COLOR_RESET;
-        } else if (token == '$') {
+        } else if (token == "$") {
             result += COLOR_VARIABLE;
             result += token;
             result += COLOR_RESET;

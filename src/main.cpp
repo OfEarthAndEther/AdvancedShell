@@ -2,6 +2,8 @@
 #include <iostream>
 
 int main(int argc, char* argv[]) {
+    (void)argc;
+    (void)argv;
     try {
         Shell shell;
         shell.run();

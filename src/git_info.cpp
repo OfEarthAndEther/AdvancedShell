@@ -8,7 +8,7 @@ std::string GitInfo::executeCommand(const std::string& cmd) {
     FILE* pipe = popen(cmd.c_str(), "r");
     if (!pipe) return "";
     
-    char buffer = {0};
+    char buffer[128] = {0};
     std::string result;
     while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
         result += buffer;
